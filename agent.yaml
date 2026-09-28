@@ -1,0 +1,9 @@
+spec_version: "0.1.0"
+name: interview-question-planner
+version: 1.0.0
+description: Builds structured, role-relevant interview plans with consistent questions and evaluation prompts.
+author: Janice Benita F
+runtime:
+  max_turns: 20
+  timeout: 120
+tags: [hr, recruiting, interviews, planning]
