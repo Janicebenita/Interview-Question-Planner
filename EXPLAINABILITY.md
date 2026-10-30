@@ -22,6 +22,6 @@ Uncertainty is reported when requirements conflict or lack detail. A human inter
 
 ## Implementation in This Repository
 
-The repository is a declarative OpenGAP implementation. `agent.yaml` specifies the role-and-competency inputs and the proposed interview-plan output, `SOUL.md` defines fairness and protected-characteristic constraints, and this file explains the rationale and approval boundary; `README.md` provides usage context.
+`agent.py` implements `build_interview_plan(role)`. For every supplied competency it creates the same evidence-oriented behavioral question, contribution/result follow-up, and job-related evaluation prompt; it reports missing competencies, prohibits protected topics, and requires human approval. `test_agent.py` verifies one question per competency and the protected-topic guardrail.
 
-There is no applicant-tracking connector or autonomous interview scorer in the repository. A compatible host must show the generated plan to a human interviewer, preserve uncertainty about incomplete role requirements, and require approval before use.
+There is no applicant-tracking connector or autonomous interview scorer. A human interviewer must approve the generated plan and conduct the evaluation.
